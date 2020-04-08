@@ -16,10 +16,10 @@
                 Something insightful. Something deep. Maybe you like green eggs and ham? Or long walks on the beach?</p>
                 <nav>
                     <ul>
-                        <li><a href="/"></a>Home</li>
+                        <li><a href="/" title="@Page.Title" class="current"></a>Home</li>
                         @foreach (var contentPage in App.ContentPages) {
                             if (contentPage.Title == Page.Title) {
-                                <li><a href="~/ContentPage/@contentPage.Id" title="@contentPage.Header" class="current">@contentPage.Header</a></li>
+                                <li><a href="~/ContentPage/@contentPage.Id" title="@contentPage.Header">@contentPage.Header</a></li>
                             } else {
                                 <li><a href="~/ContentPage/@contentPage.Id" title="@contentPage.Header">@contentPage.Header</a></li>
                             }
